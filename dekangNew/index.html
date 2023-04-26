@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dekang</title>
+  <style>
+    .loader{display:flex;align-items:center;justify-content:center;filter:url(#gooey);animation:rotate 2s ease infinite}.loader .ball{width:80px;height:80px;background-color:#66cdaa;border-radius:100%}.loader .ball:nth-child(1){animation:pull-left 2s ease infinite}.loader .ball:nth-child(2){animation:shimmy 2s ease infinite}.loader .ball:nth-child(3){animation:pull-right 2s ease infinite}.loader_overlay{position:fixed;top:0;display:flex;justify-content:center;background-color:#fff;width:100%;height:100%;z-index:10000}@keyframes rotate{from{transform:rotate(0)}to{transform:rotate(720deg)}}@keyframes shimmy{0%,55%{transform:translate(0,0)}60%,65%{transform:translate(-12px,12px)}80%,85%{transform:translate(0,0)}90%{transform:scaleX(1.2) translate(-24px,0)}100%{transform:translate(0,0)}}@keyframes pull-left{0%{transform:scale(.5) translateX(150%)}50%{transform:scale(1) translateX(-25%)}75%{transform:scale(1) translateX(300%)}100%{transform:scale(.5) translateX(150%)}}@keyframes pull-right{0%{transform:scale(.5) translateX(-150%)}50%{transform:scale(1) translateX(25%)}80%{transform:scale(.5) translateX(-150%)}90%{transform:scale(.5) translateX(-300%)}100%{transform:scale(.5) translateX(-150%)}}
+  </style>
+  <script>
+    window.onload = ()=>{
+      document.querySelector(".loader_overlay").remove();
+    }
+  </script>
+
+  <link rel="preconnect" crossorigin  href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <link  rel="stylesheet" href="./css/bootstrap-grid.min.css">
+  <link  rel="stylesheet" href="./css/slick.css">
+  <link  rel="stylesheet" href="./css/slick-theme.css">
+  <link  rel="stylesheet" href="./css/all.css">
+  
+
+  <link  rel="stylesheet" href="./style.css">
+
+
+
+
+</head>
+<body>
+  <div class="loader_overlay">
+    <div class="loader">
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+    </div>
+  </div>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="row">
+        <a href="./" class="col-5 col-lg-3 header_logo">
+          <img src="./img/logo.webp" alt="Dekang">
+        </a>
+        <div class="col-7 col-lg-1 order-lg-last header_icon">
+          <div class="icon icon--user">
+            <a href="#">
+              <i class="far fa-user"></i>
+            </a>
+          </div>
+          <div class="icon icon--cart">
+            <a href="#">
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+          </div>
+          <div class="icon icon--menu">
+            <i class="fas fa-bars "></i>
+          </div>
+        </div>
+        <ul class="nav-top col-12 col-lg-8">
+          <li class="nav-top--links"> <a href="./shop.html">О магазине</a> </li>
+          <li class="nav-top--links"> <a href="./shop.html">Оплата</a> </li>
+          <li class="nav-top--links"> <a href="./shop.html">Доставка</a> </li>
+          <li class="nav-top--links"> <a href="./shop.html">Гарантия</a> </li>
+          <li class="nav-top--links"> <a href="./shop.html">Вопросы и ответы</a> </li>
+          <li class="nav-top--links"> <a href="./shop.html">Дилерам</a> </li>
+        </ul>
+      </div>
+    </div>
+
+  </header>
+  
+
+  <!-- Body -->
+  <main>
+
+    <!-- TOP -->
+    <section class="home">
+      <div class="container">
+        <div class="row">
+          <div class="categories col-12 col-md-4 col-lg-3">
+            <h3 class="categories__title">
+              <i class="fas fa-align-left"></i>
+              Categories
+            </h3>
+            <nav class="categories__menu categories__home">
+              <ul class="nav-left">
+                <li class="nav-left__item parent">
+                  <div class="nav-left_icon">
+                    <img src="./img/liquade.png" alt="">
+                  </div>
+                  <a href="#" class="nav-left__links ">
+                    Жидкости
+                  </a>
+                  <i class="fa fa-angle-right"></i>
+                  <ul class="submenu">
+                    <li class="submenu__item ">
+                      <a href="#" class="submenu__links ">
+                        Здоровье
+                      </a>
+                    </li>
+                    <li class="submenu__item parent">
+                      <a href="#" class="submenu__links">
+                        На никотиновых солях
+                      </a>
+                      <i class="fa fa-angle-right"></i>
+                      <ul class="submenu">
+                        <li class="submenu__item ">
+                          <a href="#" class="submenu__links ">
+                            Здоровье
+                          </a>
+                        </li>
+                        <li class="submenu__item ">
+                          <a href="#" class="submenu__links">
+                            На никотиновых солях
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-left__item">
+                  <div class="nav-left_icon">
+                    <img src="./img/vape.png" alt="">
+                  </div>
+                  <a href="#" class="nav-left__links ">
+                    Электронные сигареты
+                  </a>
+                </li>
+                <li class="nav-left__item">
+                  <div class="nav-left_icon">
+                    <img src="./img/flask.png" alt="">
+                  </div>
+                  
+                  <a href="#" class="nav-left__links">
+                    Сделай сам
+                  </a>
+                </li>
+                <li class="nav-left__item">
+                  <div class="nav-left_icon">
+                    <img src="./img/spring.png" alt="">
+                  </div>
+                  
+                  <a href="#" class="nav-left__links ">
+                    Аксесуары
+                  </a>
+                </li>
+                <li class="nav-left__item">
+                  <div class="nav-left_icon">
+                    <img src="./img/hookah.png" alt="">
+                  </div>
+                  
+                  <a href="#" class="nav-left__links">
+                    Альтернатива
+                  </a>
+                </li>
+                <li class="nav-left__item">
+                  <div class="nav-left_icon">
+                    <img src="./img/virus.png" alt="">
+                  </div>
+                  <a href="#" class="nav-left__links ">
+                    Covid-19
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="search col-12 col-md-8 col-lg-9">
+            <input class="search__input" type="text" name="search" placeholder="Search Products Here"/>
+            <button class="search__btn" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+          <div class="banner col-12  col-lg-9  offset-lg-3">
+            <div class="banner_item">
+              <a href="#">
+                <img src="./img/slide.webp" alt="">
+              </a>
+            </div>
+            <div class="banner_item">
+              <a href="#">
+                <img src="./img/slide.webp" alt="">
+              </a>
+            </div>
+            <div class="banner_item">
+              <a href="#">
+                <img src="./img/slide.webp" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-4">
+
+            <a class="services_item">
+              <img src="./img/dostavka.png" alt="">
+              <h3 class="services_title">
+                Доставка
+              </h3>
+            </a>
+
+          </div>
+
+          <div class="col-12 col-lg-4">
+            <a class="services_item">
+              <img src="./img/box.png" alt="">
+              <h3 class="services_title">
+                Дилерам
+              </h3>
+            </a>
+          </div>
+
+          <div class="col-12 col-lg-4">
+            <a class="services_item">
+              <img src="./img/faq.png" alt="">
+              <h3 class="services_title">
+                Вопросы <br>
+                и ответы
+              </h3>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="products">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4">
+            <a class="products_item" style="background-image: url(/img/nabor.webp);">
+              <div class="products_info">
+                <h3 class="products_title">
+                  Жидкости
+                </h3>
+                <h5 class="products_more">
+                  Подробно
+                </h5>
+              </div>
+            </a>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <a class="products_item" style="background-image: url(/img/vape.webp);">
+              <div class="products_info">
+                <h3 class="products_title">
+                  Электронные 
+                  сигареты
+                </h3>
+                <h5 class="products_more">
+                  Подробно
+                </h5>
+              </div>
+            </a>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <a class="products_item" style="background-image: url(/img/flask.webp);">
+              <div class="products_info">
+                <h3 class="products_title">
+                  Сделай сам
+                </h3>
+                <h5 class="products_more">
+                  Подробно
+                </h5>
+              </div>
+            </a>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <a class="products_item" style="background-image: url(/img/accessory.webp);">
+              <div class="products_info" >
+                <h3 class="products_title">
+                  Аксессуары
+                </h3>
+                <h5 class="products_more">
+                  Подробно
+                </h5>
+              </div>
+            </a>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <a class="products_item" style="background-image: url(/img/hookah.webp);">
+              <div class="products_info">
+                <h3 class="products_title">
+                  Альтернатива
+                </h3>
+                <h5 class="products_more">
+                  Подробно
+                </h5>
+              </div>
+            </a>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <a class="products_item" style="background-image: url(/img/covid.webp);">
+              <div class="products_info">
+                <h3 class="products_title">
+                  Covid -19
+                </h3>
+                <h5 class="products_more">
+                  Подробно
+                </h5>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="popular">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h3 class="news_title">
+              Новинки
+            </h3>
+            <div class="popular_items" >
+
+
+              <article class="popular_item">
+                <a class="popular_item-link" href="./product.html">
+                  <img src="./img/covid.webp" alt="" class="popular_item-img">
+                  <span class="popular_item-disc">-27%</span>
+                </a>
+                <div class="popular_item-controls">
+                  <div class="quantity">
+                    <button class="quantity-btns">-</button>
+                    <input type="text" name="quantity"  class="quantity-input">
+                    <button class="quantity-btns">+</button>
+                  </div>
+                  <button class="btn-buy">
+                    Купить
+                  </button>
+                </div>
+                <h5 class="popular_item-title">
+                  Жидкость Herbal Vape: 
+                  Ginger (Имбирь)
+                </h5>
+                <p class="popular_item-price">400 <span>&#8372</span><span class="popular_item-price-disc">292 <span>&#8372</span></span></p>
+              </article>
+              <article class="popular_item">
+                <a class="popular_item-link" href="./product.html">
+                  <img src="./img/covid.webp" alt="" class="popular_item-img">
+                </a>
+                <div class="popular_item-controls">
+                  <div class="quantity">
+                    <button class="quantity-btns">-</button>
+                    <input type="text" name="quantity"  class="quantity-input">
+                    <button class="quantity-btns">+</button>
+                  </div>
+                  <button class="btn-buy">
+                    Купить
+                  </button>
+                </div>
+                <h5 class="popular_item-title">
+                  Профилактический набор
+                </h5>
+                <p class="popular_item-price">400 <span>&#8372</span></p>
+              </article>
+              <article class="popular_item">
+                <a class="popular_item-link" href="./product.html">
+                  <img src="./img/covid.webp" alt="" class="popular_item-img">
+                </a>
+                <div class="popular_item-controls">
+                  <div class="quantity">
+                    <button class="quantity-btns">-</button>
+                    <input type="text" name="quantity"  class="quantity-input">
+                    <button class="quantity-btns">+</button>
+                  </div>
+                  <button class="btn-buy">
+                    Купить
+                  </button>
+                </div>
+                <h5 class="popular_item-title">
+                  Жидкость Herbal Vape: 
+                  Ginger (Имбирь)
+                </h5>
+                <p class="popular_item-price">400 <span>&#8372</span></p>
+              </article>
+              <article class="popular_item">
+                <a class="popular_item-link" href="./product.html">
+                  <img src="./img/covid.webp" alt="" class="popular_item-img">
+                </a>
+                <div class="popular_item-controls">
+                  <div class="quantity">
+                    <button class="quantity-btns">-</button>
+                    <input type="text" name="quantity"  class="quantity-input">
+                    <button class="quantity-btns">+</button>
+                  </div>
+                  <button class="btn-buy">
+                    Купить
+                  </button>
+                </div>
+                <h5 class="popular_item-title">
+                  Жидкость Herbal Vape: 
+                  Ginger (Имбирь)
+                </h5>
+                <p class="popular_item-price">400 <span>&#8372</span></p>
+              </article>
+              <article class="popular_item">
+                <a class="popular_item-link" href="./product.html">
+                  <img src="./img/covid.webp" alt="" class="popular_item-img">
+                </a>
+                <div class="popular_item-controls">
+                  <div class="quantity">
+                    <button class="quantity-btns">-</button>
+                    <input type="text" name="quantity"  class="quantity-input">
+                    <button class="quantity-btns">+</button>
+                  </div>
+                  <button class="btn-buy">
+                    Купить
+                  </button>
+                </div>
+                <h5 class="popular_item-title">
+                  Жидкость Herbal Vape: 
+                  Ginger (Имбирь)
+                </h5>
+                <p class="popular_item-price">400 <span>&#8372</span></p>
+              </article>
+              <article class="popular_item">
+                <a class="popular_item-link" href="./product.html">
+                  <img src="./img/covid.webp" alt="" class="popular_item-img">
+                </a>
+                <div class="popular_item-controls">
+                  <div class="quantity">
+                    <button class="quantity-btns">-</button>
+                    <input type="text" name="quantity"  class="quantity-input">
+                    <button class="quantity-btns">+</button>
+                  </div>
+                  <button class="btn-buy">
+                    Купить
+                  </button>
+                </div>
+                <h5 class="popular_item-title">
+                  Жидкость Herbal Vape: 
+                  Ginger (Имбирь)
+                </h5>
+                <p class="popular_item-price">400 <span>&#8372</span></p>
+              </article>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="popular">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h3 class="news_title">
+              Популярные
+            </h3>
+            <div class="popular_items" >
+
+
+              <article class="popular_item">
+                <a class="popular_item-link" href="./product.html">
+                  <img src="./img/covid.webp" alt="" class="popular_item-img">
+                  <span class="popular_item-disc">-27%</span>
+                </a>
+                <div class="popular_item-controls">
+                  <div class="quantity">
+                    <button class="quantity-btns">-</button>
+                    <input type="text" name="quantity"  class="quantity-input">
+                    <button class="quantity-btns">+</button>
+                  </div>
+                  <button class="btn-buy">
+                    Купить
+                  </button>
+                </div>
+                <h5 class="popular_item-title">
+                  Жидкость Herbal Vape: 
+                  Ginger (Имбирь)
+                </h5>
+                <p class="popular_item-price">400 <span>&#8372</span><span class="popular_item-price-disc">292 <span>&#8372</span></span></p>
+              </article>
+              <article class="popular_item">
+                <a class="popular_item-link" href="./product.html">
+                  <img src="./img/covid.webp" alt="" class="popular_item-img">
+                </a>
+                <div class="popular_item-controls">
+                  <div class="quantity">
+                    <button class="quantity-btns">-</button>
+                    <input type="text" name="quantity"  class="quantity-input">
+                    <button class="quantity-btns">+</button>
+                  </div>
+                  <button class="btn-buy">
+                    Купить
+                  </button>
+                </div>
+                <h5 class="popular_item-title">
+                  Профилактический набор
+                </h5>
+                <p class="popular_item-price">400 <span>&#8372</span></p>
+              </article>
+              <article class="popular_item">
+                <a class="popular_item-link" href="./product.html">
+                  <img src="./img/covid.webp" alt="" class="popular_item-img">
+                </a>
+                <div class="popular_item-controls">
+                  <div class="quantity">
+                    <button class="quantity-btns">-</button>
+                    <input type="text" name="quantity"  class="quantity-input">
+                    <button class="quantity-btns">+</button>
+                  </div>
+                  <button class="btn-buy">
+                    Купить
+                  </button>
+                </div>
+                <h5 class="popular_item-title">
+                  Жидкость Herbal Vape: 
+                  Ginger (Имбирь)
+                </h5>
+                <p class="popular_item-price">400 <span>&#8372</span></p>
+              </article>
+              <article class="popular_item">
+                <a class="popular_item-link" href="./product.html">
+                  <img src="./img/covid.webp" alt="" class="popular_item-img">
+                </a>
+                <div class="popular_item-controls">
+                  <div class="quantity">
+                    <button class="quantity-btns">-</button>
+                    <input type="text" name="quantity"  class="quantity-input">
+                    <button class="quantity-btns">+</button>
+                  </div>
+                  <button class="btn-buy">
+                    Купить
+                  </button>
+                </div>
+                <h5 class="popular_item-title">
+                  Жидкость Herbal Vape: 
+                  Ginger (Имбирь)
+                </h5>
+                <p class="popular_item-price">400 <span>&#8372</span></p>
+              </article>
+              <article class="popular_item">
+                <a class="popular_item-link" href="./product.html">
+                  <img src="./img/covid.webp" alt="" class="popular_item-img">
+                </a>
+                <div class="popular_item-controls">
+                  <div class="quantity">
+                    <button class="quantity-btns">-</button>
+                    <input type="text" name="quantity"  class="quantity-input">
+                    <button class="quantity-btns">+</button>
+                  </div>
+                  <button class="btn-buy">
+                    Купить
+                  </button>
+                </div>
+                <h5 class="popular_item-title">
+                  Жидкость Herbal Vape: 
+                  Ginger (Имбирь)
+                </h5>
+                <p class="popular_item-price">400 <span>&#8372</span></p>
+              </article>
+              <article class="popular_item">
+                <a class="popular_item-link" href="./product.html">
+                  <img src="./img/covid.webp" alt="" class="popular_item-img">
+                </a>
+                <div class="popular_item-controls">
+                  <div class="quantity">
+                    <button class="quantity-btns">-</button>
+                    <input type="text" name="quantity"  class="quantity-input">
+                    <button class="quantity-btns">+</button>
+                  </div>
+                  <button class="btn-buy">
+                    Купить
+                  </button>
+                </div>
+                <h5 class="popular_item-title">
+                  Жидкость Herbal Vape: 
+                  Ginger (Имбирь)
+                </h5>
+                <p class="popular_item-price">400 <span>&#8372</span></p>
+              </article>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="video">
+      <div class="container">
+        <div class="row">
+          <div class="video_wraper col-12">
+
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+
+    <section class="news">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h3 class="news_title">
+              Новости, статьи, обзоры
+            </h3>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="news_item">
+                <a href="#" class="news_item-image">
+                  <img src="./img/800х400.webp" alt="" srcset="">
+                </a>
+                <div class="news_item-info">
+                  <h5 class="news_item-title">
+                    Электро сигарета для новичков 
+                    "ВРЕМЯ ЭВОЛЮЦИОНИРОВАТЬ" с Icon By
+                  </h5>
+                  <p class="news_item-text">
+                    Качество первой сигареты очень важно для начинающего вейпера и для людей, которые пытаются избавится от курения табака. Оно формирует дальнейшее отношение ко всему рынку. И это очень сложный и важный выбор.
+                  </p>
+                  <a href="#" class="news_item-more">
+                    Подробно
+                  </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="news_item">
+                <a href="#" class="news_item-image">
+                  <img src="./img/800х400.webp" alt="" srcset="">
+                </a>
+                <div class="news_item-info">
+                  <h5 class="news_item-title">
+                    Будьте здоровы!
+                  </h5>
+                  <p class="news_item-text">
+                    Качество первой сигареты очень важно для начинающего вейпера и для людей, которые пытаются избавится от курения табака. Оно формирует дальнейшее отношение ко всему рынку. И это очень сложный и важный выбор.
+                  </p>
+                  <a href="#" class="news_item-more">
+                    Подробно
+                  </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="shop_info">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h3>
+              Купить жидкость для электронных сигарет в интернет-магазине dekang.biz
+            </h3>
+            <p>
+              Купить жидкость для электронных сигарет по супер цене и от лучших мировых производителей таких как: Dekang (Деканг), Yasumi (Ясуми), SteamWorks (Стимворкс), Basis (Базис), Cafe Racer и еще более 50 популярных брендов вы можете на страницах нашего интернет-магазина.
+            </p>
+            <p>
+              Почему стоит покупать жидкость для электронных сигарет именно у нас? Интернет-магазин dekang.biz – розничный отдел компании Dekang Ukraine, на сегодняшний день, единственный в Украине представитель вейп культуры, который имеет пакет сертификатов и заключений МОЗ украинского образца и гарантирует качество и оригинальность товаров. Еще сомневаетесь? Тогда хотим обратить ваше внимание, что коллектив компании Dekang Ukraine стал «Лучшим предприятием 2015 года» и получил «Звезду качества», что свидетельствует о высоком уровне и профессионализме как сотрудников, так и компании.
+            </p>
+            <p>
+              Что еще можно купить кроме жидкости для электронных сигарет? На прилавках dekang.biz вы всегда можете купить моды электронных сигарет электронные сигареты популярных  моделей от топовых производителей, сменные аксессуары и все необходимые принадлежности для обслуживания, не говоря уже про огромный выбор клиромайзеров, бакомайзеров (RBA), дрипок (RDA). Также у нас можно купить  компоненты для самостоятельного приготовления своей авторской жидкости для электронной сигареты, ингредиенты которых имеют только натуральные и качественные составляющие.
+            </p>
+            <p>
+              Заправки для электронных сигарет доставляется по всей территории Украины в независимости от  того, где вы живете. Жидкость для электронных сигарет купить в Киеве, Одессе, Харькове и других городах проще, чем сходить в магазин за хлебом, так как вам не нужно выходить из дома. Достаточно зайти на сайт dekang.biz, выбрать желаемый товар и в два клика оформить заказ, который в кротчайшие сроки прибудет в любое удобное для вас место и время.  Свой заказ вы можете оплатить любым удобным для вас способом. Мы принимаем все виды платежей: Visa, Privat 24, WebMoney, а так же осуществляем отправку наложенным платежом при условии, что сумма заказа будет не меньше 100 грн.
+            </p>
+            <p>
+              Подводя итог, мы хотим у вас спросить о конечном выборе? Где вы будете покупать жидкость для заправки электронных сигарет и вейп гаджеты?  Если вы выбрали магазин «жидкость для электронных сигарет Dekang», то вы не ошиблись и всегда сэкономите не только свои деньги и время, но и будете спокойны за безопасность вашего здоровья.
+            </p>
+            <div class="shop_info-more">
+              <a  href="#">Подробнее...</a>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+
+ 
+ <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="footer_subscribe">
+            <a href="#" class="footer_logo">
+              <img src="./img/logo.webp" alt="Dekang">
+            </a>
+            <p class="footer_text">           
+              Интернет магазин электронных
+              сигарет и жидкости
+            </p>
+            <div class="subscribe">
+              <input type="text" class="subscribe_input">
+              <button class="subscribe_btn">
+                <i class="fas fa-envelope"></i>
+              </button>
+            </div>
+            <p class="footer_subtext">           
+              Будьте в курсе поступлений новых товаров
+            </p>
+          </div>
+        </div>
+        <div class="col-md-2 col-6 col-sm-4">
+          <div class="footer_menu">
+            <a href="#">О магазине</a>
+            <a href="#">Новости</a>
+            <a href="#">Акции</a>
+            <a href="#">Доставка</a>
+            <a href="#">Оплата</a>
+            <a href="#">Гарантия</a>
+            <a href="#">Дилерам</a>
+            <a href="#">Бренды</a>
+          </div>
+        </div>
+        <div class="col-md-3 col-6 col-sm-4">
+          <div class="footer_categories">
+            <a href="#">Жидкости</a>
+            <a href="#">Электронные сигареты</a>
+            <a href="#">Сделай сам</a>
+            <a href="#">Аксессуары</a>
+            <a href="#">Альтернатива</a>
+            <a href="#">Covid-19</a>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-4">
+          <div class="footer_schedule">
+            <p class="footer_text">
+              Служба поддержки:
+            </p>
+            <a class="footer_phone" href="tel:+380674126603">067 412 66 03</a>
+            <a class="footer_phone" href="tel:+3800503395811">050 339 58 11</a>
+            <a class="footer_phone" href="tel:+380631142315">063 114 23 15</a>
+            <p class="footer_text">
+              Время работы: <br>
+              Пн-Пт: 09:00-17:30 <br>
+              Сб-Вс: выходные <br>
+            </p>
+            <div class="footer_social">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid footer_copyright">
+      <div class="row">
+        <div class="col-12">
+          <p>
+            © 2011 - 2020 dekang.biz  Копирование материалов с сайта без согласия запрещенно. Все права защищены.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  <script defer  src="./js/jquery-3.5.1.min.js"></script>
+  <script defer src="./js/slick.min.js"></script>
+  <script defer src="./js/script.js"></script>
+</body>
+
+</html>

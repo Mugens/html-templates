@@ -1,0 +1,33 @@
+
+@font-face {
+  font-family: 'Schist';
+  src: url('SchistBold.woff2') format('woff2'), url('SchistBold.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Schist';
+  src: url('SchistRegular.woff2') format('woff2'), url('SchistRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('Rubik-Regular.woff2') format('woff2'),
+      url('Rubik-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('Rubik-Medium.woff2') format('woff2'),
+      url('Rubik-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
